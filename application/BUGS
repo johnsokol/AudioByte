@@ -1,0 +1,42 @@
+This is a list of known bugs for PLAY.COM               02-24-92
+
+bugs fixed
+----------
+.  Zoom of Redraw of Graphic GRAPH trashes the digital number of the pointers.
+.  Mouse Icon flickered at end of sample playback when LOOP button down.
+.  Not Crashing as many 386 as before.
+.  The <ESC> key now work with the following menus VOLUME, WRITE, and QUIT.
+
+bugs remaining
+--------------
+.  Samples can still load into video memory, trashing the screen.
+.  Did Not fix the command line section (it needs a lot of work).
+.  Halve does not update screen or memory pointers.
+.  Moving the screen pointers to the extreme right can page the Graphic GRAPH
+   through video memory.
+.  After playing a sample, if you don't move the mouse, then press a key
+   nothing happens till you move the mouse.
+.  Pasting before saving a sample trashes the program.
+.  MAX key in the volume menu doesn't do anything.
+
+features I don't like
+---------------------
+.  You must have a mouse and VGA for the interactive mode.
+.  I did not have time for the AutoMatic Port Detect.
+.  I hide the internal Speaker option to help sell AUDIO BYTE.
+.  Program forgets the video mode before it starts(though i fixed this).
+.  Program forgets what sample (filename) is loaded.
+.  HELP for a button should be a toggle not a hold down button.
+.  The only exit to the Sequencer is to press the <ESC> key.
+.  Middle Mouse button not used at all.
+.  UnZoom pointers move when you don't expect them to.
+.  Picking a file is harzardous. (need to make it a double click).
+.  File directory is not sorted before displayed.
+.  Sound Blaster is not supported YET.
+
+bugs new
+--------
+.  Hercules Graphics now don't work right.
+.  The Sequencer menu is now a lot smaller.
+.  The file load menu is uglier now (I put some bug in it).
+

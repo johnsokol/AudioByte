@@ -1,0 +1,334 @@
+PLAY v4.20                                                      02-24-92
+----------
+
+
+                        P       L       A       Y
+                        -------------------------
+                              version 4.20
+
+                     Digital Sound Player and Editor
+                     -------------------------------
+                          for the Public Domain
+
+
+                                   by
+                             Zebra Research
+
+                            Original Code by
+                              Mark J. Cox
+
+
+A Little History...
+-------------------
+           June 8, 1991 Zebra Research becomes a real company by offering
+        it's first product "Audio Byte", a digital sound playback dongle
+        for the IBM PC Parallel Port.  The release was warmly welcomed
+        by local buyers interested in digital sound on the PC. The package
+        included "SPLAY", playback software and more than 2 megs of sound.
+           July, 1991 Release 1.10 now included Software written by
+        Mark J. Cox, "MODPLAY" and "PLAY".
+           August, 1991  Mark J. Cox  Agrees to let Zebra Research Agrees
+        to use "PLAY" and it's code, as long a version remains available
+        in the PUBLIC DOMAIN.
+
+Our Promise to you....
+---------------
+           Zebra Research promises to keep version of "PLAY" in the
+        PUBLIC DOMAIN with every commercial release it produces. The
+        idea is make available for those that wish to explore digital
+        sound an interactive tool, which might not normally be available.
+
+Who can use this Software..
+---------------------------
+           This Software is available for use to any person or organization
+        without restrictions, so long as it is not disassembled, reversed
+        engineered or otherwise tampered this.
+
+Restrictions...
+---------------
+           This software may not be sold by any person or organization,
+        except as a copying fee provided to companies whose primary
+        business is copying of PUBLIC DOMAIN SOFWARE or SHAREWARE.
+        You must supply this an any other documents included to any one
+        requesting a copy. You can not include this software with any
+        computer hardware, except this the prior written permission
+        of ZEBRA RESEARCH.
+
+User Support...
+---------------
+           User Support is limited to questions via electronic mail
+        and direct calls to Zebra Research. You call us and we will
+        answer your questions.
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+PLAY v4.20                                                      02-24-92
+by ZERBRA RESEARCH
+Original Code by Mark J. Cox
+
+
+        How it works?
+        -------------
+        PLAY is a combination command line playback and sample program,
+        it is also a full screen INTERACTIVE editor. This software
+        written entirely in A86 assembely is both powerful and compact.
+        The features include:
+
+                Wide range of playback and sample rates 5-44 kHz
+                Supports both mouse and keyboard commands
+                Built in HELP on buttons
+                FAST Zoom and Unzoom of sound samples
+                Two types of post filtering
+                Automatic support for Amiga and Atari sound files
+                Includes a small Sampling digitizer
+                Includes standard type editing functions
+                Includes unique editing features like reverse
+
+                NEW FEATURES
+                ------------
+                Keyboard keys for buttons now make more sense.
+                8kHz button added 16kHz eliminated.
+                New upper playback rate of 44kHz.
+
+        To see which bugs were fixed and added use the internal button
+        "BUGS".
+
+
+        What you'll NEED
+        ----------------
+        For the Command line mode (explained below) all you will need
+        is an IBM PC computer (or compatible).
+
+        For the Interactive mode (also explained below) you will need
+        a VGA monitor and a mouse.
+
+        We recommend at least an AT-PC (286) machine with a clock speed
+        of about 10mHz or better. You may also want one of our
+        AUDIO BYTES to playback sound thru the printer port(LPT1).
+        We also recommend a Hard Disk and an extended keyboard.
+        And, of course, the more memory the better.
+
+
+        Starting PLAY.
+        --------------
+        Starting PLAY can be done one of two ways, using the COMMAND LINE
+        MODE you type the program name followed by a blank space followed by
+        the name of a sound sample (the file name of the sound sample).
+        Here is an example:
+
+        C:\SOUND>PLAY BART.SND
+
+        PLAY will play the sound sample BART.SND at the default speed (11kHz)
+        throught the default port (LPT1).
+
+        NOTE: THE COMMAND LINE VERSION IS NOT RELIABLE I PROMISE TO FIX IT
+              BY THE NEXT RELEASE.
+
+        Starting PLAY in the INTERACTIVE MODE can be done one of two ways
+        type PLAY with no parameters or the PLAY with the interactive
+        switch. Here are some examples:
+
+        C:\SOUND>PLAY
+
+        C:\SOUND>PLAY /i
+
+
+        Exiting PLAY.
+        -------------
+        If you are in the command line mode, PLAY will stop on it's own
+        when done, unless you are recording.
+        If you are in the interactive mode, located in the upper right hand
+        corner is the QUIT button. Depress the Quit button and confirm
+        the exit in the popup dialog box by pressing the NEW QUIT button.
+        To exit quickly hit the "q" twice on the keyboard.
+
+
+
+        COMMAND LINE MODE OPTIONS
+        -------------------------
+        I did not have time to really fix the command line problems, but
+        I promise to have a new interface on the next release.
+        Here are the options and how they work, the best I know.
+
+
+        Usage: PLAY [/k<nn>][/l<n>][/option] [<filename>]
+
+        k<nn> = Select Play/Record speed in kHz (default 11kHz)
+        l<n>  = Specify what hardware port to use (/l? for list)
+                (SEE BELOW)
+
+        s                Play <filename> through PC speaker (Lo-Fi)
+        p                Play <filename> through D>A hardware (Hi-Fi)
+        r                Record sample and save as <filename> with preview
+        e                Listen to sampler input with echo
+        v                Displays version information and compiled options
+        i (or no option) Invokes Interactive version of PLAY
+
+                Port options are:
+                l1  Printer port one (LPT1) on most systems
+                l2  Printer port two (LPT2) [is LPT3 on a PS/2]
+
+                lP  Prototype adaptor board (Base address 0300h)
+                lV  Printer port one (LPT1) on video board of a few systems
+
+
+        INTERACTIVE MODE
+        ----------------
+        The Interactive mode is where I have spent most of my time and
+        here it is.
+
+        The interface (what makes is go between you and the computer)
+        is mainly mouse driven, but every screen button (just about) has a
+        corresponding keyboard button to do the same thing.
+
+            The MOUSE and doing something.
+            ------------------------------
+            To use the mouse simply position the screen pointer
+            (the musical notes) over the button you wish to activate,
+            then press the left mouse button.
+            Here is how:
+
+
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³   button    ³     screen pointer      mouse (left button)
+               ³             ³     ³                    VV
+               ³     //      ³     ³                  ÚÄÄÄÄÂÄÄÄÄ¿
+               ³   // ³      ³     ³                  ³    ³    ³
+               ³   ³  ³      ³     ³                  ³    ³    ³
+               ÀÄÄÄÅÄÄÅÄÄÄÄÄÄÙ     ³                  ³    ³    ³
+                   ³  ³            ³                  ÃÄÄÄÄÁÄÄÄÄ´
+                   ³  ³            ³                  ³         ³
+                  (O)(O)     <<<<ÄÄÙ                  ³         ³
+                                                      ³         ³
+                                                      ³         ³
+                                                      ³         ³
+                                                      ³         ³
+                                                      ÀÄÄÄÄÄÄÄÄÄÙ
+
+            The MOUSE and getting help.
+            ---------------------------
+            To get help with the mouse simply position the screen pointer
+            (the musical notes) over the key you wish to get help about,
+            then press the right mouse button.
+            Here is how:
+
+
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³   button    ³     screen pointer          mouse (right button)
+               ³             ³     ³                         VV
+               ³     //      ³     ³                  ÚÄÄÄÄÂÄÄÄÄ¿
+               ³   // ³      ³     ³                  ³    ³    ³
+               ³   ³  ³      ³     ³                  ³    ³    ³
+               ÀÄÄÄÅÄÄÅÄÄÄÄÄÄÙ     ³                  ³    ³    ³
+                   ³  ³            ³                  ÃÄÄÄÄÁÄÄÄÄ´
+                   ³  ³            ³                  ³         ³
+                  (O)(O)     <<<<ÄÄÙ                  ³         ³
+                                                      ³         ³
+                                                      ³         ³
+                                                      ³         ³
+                                                      ³         ³
+                                                      ÀÄÄÄÄÄÄÄÄÄÙ
+
+
+
+            Keyboard equivalents to screen buttons
+            --------------------------------------
+            NOTE: Keys are CASE sensitive.
+
+            q     QUIT the program (get the quit menu)
+            qq    TO EXIT fast
+            ?     display HELP
+            o     ORDERING information for Sound Equipment
+            b     display BUGS
+
+            l     LOOP when complete with the playback of a sample
+            p     PLAY the sample between the pointers
+            s     activate the SEQUENCER
+            S     use A2d to SAMPLE a sound
+
+            h     toggle the HARDWARE to use
+            8     switch to 8kHz frequency
+            1     switch to 11kHz frequency
+            2     switch to 22kHz frequency
+            i     INcrease the frequency
+            d     DEcrease the frequency
+            z     Zoom in on the GRAPH
+            u     Unzoom on the GRAPH
+            ,     move left screen pointer to left
+            .     move left screen pointer to right
+            <     move right screen pointer to left
+            >     move right screen pointer to right
+
+            K     CUT clear the sample area between the point
+            C     COPY the sample area between the point to disk
+            P     PASTE the sample area between the point from the disk
+            /     shift logically right the sample (divide each byte by 2)
+            A     translate the current sample to Amiga format
+            *     shift logically left the sample  (multiply each byte by 2)
+            C     CLEAR the sample in the area between the pointers
+            R     REVERSE the sample in the area between the pointers
+            !     use filter 1 on the sample
+            @     use filter 2 on the sample
+            H     HALVE sample rate on a sample (make a 11kHz a 5.5kHz, kinda)
+            V     change the VOLUME of a sample (mathematically)
+
+            D     change current DRIVE
+            L     LOAD a sound sample (get menu of files in directory)
+            W     WRITE a sound sample (get menu of formats to available)
+            <ESC> store the screen pointers for later use
+
+            F1 - F12  keys used in conjunction with the <ESC> key
+
+            volume_menu
+            -----------
+            (DEFAULT = none)
+                  a             Abort changing the volume
+                  <ESC>         Abort changing the volume, also
+                  <ENTER>       Ok    change the volume
+                  u             Up   - adjust the volume up   (by 2%)
+                  d             Down - adjust the volume down (by 2%)
+                  2             200% - increase the volume 200%
+                  5             50%  - decrease the volume to half
+                  m             Max  - doesn't do anything yet
+
+
+            format_menu
+            -----------
+            (DEFAULT = RAW format)
+                  a             Abort saving the file
+                  <ESC>         Abort saving the file, also
+                  <ENTER>       Ok    save the file
+                  n             name   - toggle button to enter file name
+                                         (After entering the file name
+                                          hit the <ENTER> button twice
+                                          to save in the default format.)
+                  f             format - toggle the available file formats
+            quit_menu
+            ---------
+            (DEFAULT = ABORT)
+                  a             Abort (don't quit the program)
+                  <ESC>         Abort (also works)
+                  q             Quit  (confirm quiting the program)
+
+
+******************************************************************************
+*                                                                            *
+*                    More sound files are availible                          *
+*                                                                            *
+*                on Turbo Sys BBS (415)365-7491 2400 N/8/1                   *
+*                                                                            *
+******************************************************************************
+
+     For MORE HELP, upgrades, registration, or additional sound files.
+     Contact : Zebra Research
+     modem     (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1
+
+     { NEW, also check out the public domain software that run with }
+     { our sound adapter,  MODPLAY and PLAY (sound editor).         }
+
+
+     US mail:  Zebra Research
+               P.O. BOX 5716
+               Redwood City, Ca.  94063
+

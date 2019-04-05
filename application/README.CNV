@@ -1,0 +1,21 @@
+SCONVERT v1.00                                                  02-24-92
+--------------
+Sound Convert - A utility to convert sound files
+by Zebra Research
+
+What this is?
+------------
+  Sound Convert is a utility to convert sound files from signed to
+unsigned format.  It will also convert sound files from unsigned
+format to signed format.
+
+
+    Usage: SCONVERT [files]
+                     files = Names of files to convert.
+                             Wildcards *,? ok.
+
+     If you have any problems read the SCONVERT.DOC.
+     For MORE HELP, upgrades, registration, or additional sound files .
+     Contact : Zebra Research
+               P.O. BOX 5716     Redwood, City, Ca.  94063
+               (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1

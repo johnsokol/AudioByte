@@ -1,0 +1,23 @@
+SPLAYIT v1.00                                                    02-24-92
+-------------
+The Digital Sound Point and Shoot Player for the Public Domain
+by Zebra Research -- Code by John L. Sokol
+
+        SPLAYIT is is a point and shoot front end for SPLAY and SPLAYER.
+ It is a full screen utility with mouse and keyboard support. This program
+ was written as an example on how to use our product AUDIO BYTE and SPLAY.
+ 
+The features include:
+  .Wide range of playback and sample rates 5-44 kHz.
+  .Supports all IBM PC types (8086,80x86).
+  .Supports all standard IBM PC monitors.
+  .Supports both mouse and keyboard commands.
+  .Accepts most all PCM sound formats (Sound Blaster-VOC,Mac,Amiga,SGI,etc.).
+  .Uses the PC's own internal speaker.
+
+You will need an IBM PC computer (or compatible) with an internal speaker.
+     If you have any problems read the SPLAYIT.DOC.
+     For MORE HELP, upgrades, registration, or additional sound files .
+     Contact : Zebra Research
+               P.O. BOX 5716     Redwood, City, Ca.  94063
+               (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1

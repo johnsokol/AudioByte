@@ -1,0 +1,36 @@
+
+
+PROCEDURE CONFIG_MEM;
+BEGIN;
+  REC_SIZ := miscinfosize + 2 * N_TEMPS;
+  PAG_IND := trunc(16384 / REC_SIZ);
+  INDEX := 1;
+  IF longint(PAGES_AVAILABLE) * longint(PAG_IND) < 65536
+    THEN
+    LIM_IND := PAGES_AVAILABLE * PAG_IND
+  ELSE
+    lim_ind := 65535;
+END;
+
+
+PROCEDURE  get_rec(n:word);
+  VAR page,offset:word;
+BEGIN
+  IF n > lim_ind THEN n := lim_ind;
+  page   :=  n DIV pag_ind  ;
+  offset := (n MOD pag_ind) * rec_siz;
+  IF cpage <> page THEN
+    BEGIN
+      put_page(page,0);
+      cpage := page;
+    END;
+  rec := ptr(frame_seg,offset);
+  index := n;
+END;
+
+ type
+  d_ptr = ^dat;
+
+ var
+  rec     :d_ptr;
+

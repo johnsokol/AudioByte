@@ -1,0 +1,20 @@
+Splayer.EXE  v1.00                                              2-24-92
+==================
+SPLAYER, a digital sound playback program for the IBM PCs Internal Speaker
+
+     To run the player type at the command line :
+
+     C:\> SPLAYER [options] filename.ext
+
+     Here is an example:
+
+     C:\> SPLAY -s4 -v cokeisit.snd
+
+     Run Splayer.exe with no parameters for HELP.
+
+     If you have any problems read the SPLAYER.DOC.
+     For MORE HELP, upgrades, registration, or additional sound files .
+     Contact : Zebra Research
+               P.O. BOX 5716
+               Redwood, City, Ca.  94063
+               (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1

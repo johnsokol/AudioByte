@@ -1,0 +1,23 @@
+SREVERB v1.00                                                  02-24-92
+-------------
+Sound Reverb - A utility to add reverb to unsigned sound files
+by Zebra Research
+
+What this is?
+------------
+  Sound Reverb is a utility to add reverb to sound files.
+There is no way to reverse this.
+
+    Usage: SREVERB  Infile Outfile [Echo Count]
+
+                Infile  - name of the file to add reverb to
+
+                Outfile - name of the resultant file
+
+                [Echo Count]    - a number between 0 and 60000
+
+     If you have any problems read the SREVERB.DOC.
+     For MORE HELP, upgrades, registration, or additional sound files .
+     Contact : Zebra Research
+               P.O. BOX 5716     Redwood, City, Ca.  94063
+               (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1

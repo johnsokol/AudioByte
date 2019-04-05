@@ -1,0 +1,206 @@
+SPLAYER v1.00                                                    02-24-92
+-------------
+
+
+                   S     P     L     A     Y     E     R
+                   -------------------------------------
+                               version 1.00
+
+
+                      Digital Sound PLAYBACK utility
+                      ------------------------------
+                      for the IBM PC internal speaker
+                          ---------------------
+                          FOR THE PUBLIC DOMAIN
+
+
+                                   by
+                             Zebra Research
+
+                                Code  by
+                              John L. Sokol
+
+
+
+
+******************************************************************************
+*                                                                            *
+*                    More sound files are availible                          *
+*                                                                            *
+*                on Turbo Sys BBS (415)365-7491 2400 N/8/1                   *
+*                                                                            *
+******************************************************************************
+
+Our Promise to you....
+---------------
+           Zebra Research promises to keep version of "SPLAYER" in the
+        PUBLIC DOMAIN with every commercial release it produces. The
+        idea is to make available to those that wish to explore digital
+        audio, which might not normally be available.
+
+Who can use this Software..
+---------------------------
+           This Software is available for use to any person or organization
+        without restrictions, so long as it is not disassembled, reversed
+        engineered or otherwise tampered with.
+
+Restrictions...
+---------------
+           This software may not be sold by any person or organization,
+        except as a copying fee provided to companies whose primary
+        business is copying of PUBLIC DOMAIN SOFWARE or SHAREWARE.
+        You must supply this and any other documents included, to any one
+        requesting a copy. You can not include this software with any
+        computer hardware, except this the prior written permission
+        of ZEBRA RESEARCH.
+
+User Support...
+---------------
+           User Support is limited to questions via electronic mail
+        and direct calls to Zebra Research.  If you call us we will
+        answer your questions.
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+SPLAYER v1.00                                              02-24-92
+-------------
+Code by John L. Sokol
+
+
+        How to it works?
+        ----------------
+        SPLAYER is digital sound playback program for the internal
+        speaker. This a Public Domain subsitute for our SPLAY module
+        released for our AUDIO BYTE.  SPLAYER is complete compatible
+        with our commercial Sound Implementation SPLAY.  This utility
+        offer programers and hackers alike a platform for not only
+        developing application but, along with PLAYIT and PLAY (the
+        digital sound editor), but great tools to impress your friends
+        and associates.
+        The features include:
+
+          .Wide range of playback and sample rates 5-44 kHz.
+          .Supports all IBM PC types (8086,80x86).
+          .Accepts most all PCM(1) sound formats
+             (Sound Blaster-VOC,Macintosh,Amiga,SGI,etc.).
+          .Uses the PC's own internal speaker(2).
+          .Uses six bits playback
+             (some others use five on the internal speaker).
+          .Uses an advanced algorigthm to sound good at any sample rate.
+          .Does NOT crash on a old type PC (the original 4MHz machine).
+
+          NOTE: If you are familiar with our SPLAY.exe it is
+                very compatible with it.
+                (1) PCM (Pulse Code Modulation) is a very common method for
+                    storing analog signals (like sound) to a digital format.
+                (2) Some Laptops use Piezo buzzered, they don't work like
+                    a speaker, so they sound scratchy (actually, horibble).
+                    For the adventourious hackers replacing the speaker
+                    will solve the problem (At your own risk!!)
+
+
+        What you'll NEED
+        ----------------
+        You will need an IBM PC computer (or compatible) with an internal
+        speaker.
+
+        We recommend at least an AT-PC (286) machine with a clock speed
+        of about 6MHz or better. You may also want one of our
+        AUDIO BYTES to playback sound thru the printer port(LPT1).
+        A monitor of some sort, MDA, CGA, EGA, or VGA, would be nice.
+        We also recommend a Hard Disk and, of course, the more memory
+        the merrier.
+
+        NOTE: SPLAY and SPLAYER do work on the old (4MHz) IBM PCs, but
+              on the higher sample rates it may not sound correct.
+              SPLAY does a far superior job on the old (4MHz) PCs, I
+              would strongly suggest you get a dongle to really hear
+              the difference.
+
+
+
+        Starting SPLAYER.
+        -----------------
+        Starting SPLAYER can be done at the COMMAND LINE, by typing
+        the program name followed by a blank space followed by
+        the name of a sound sample (the file name of the sound sample).
+        Here is an example:
+
+        C:\SOUND>SPLAYER BART.SND
+
+        SPLAYER will play the sound sample BART.SND at the default
+        speed (22kHz) throught the internal speaker.
+
+
+        Exiting SPLAYER.
+        ----------------
+        When you are in the command line mode, SPLAYER will stop on
+        it's own when done.
+
+
+        Command Line Options
+        --------------------
+        To get HELP enter SPLAYER at the commandline
+        without any parameters and you will get help.
+        Order is important for SPLAYER, make sure to leave
+        the sound file name for last, the other parameters
+        must preceed it.
+
+        Synopsis: SPLAYER [options] soundfile
+
+        Options are:
+
+        -S (Sample rate parameter) from 0 to 9
+                  0 = 44000 Hz  |  5 = 8000 Hz
+          Default 1 = 22000 Hz  |  6 = 7000 Hz
+                  2 = 16000 Hz  |  7 = 6500 Hz
+                  3 = 13500 Hz  |  8 = 5500 Hz
+                  4 = 11000 Hz  |  9 = 5000 Hz
+
+        -V Verbose (Causes text output)
+                NOTE: Errors will always be displayed
+
+        EXAMPLE: SPLAYER -S4 -V C:\SND\COKEISIT.SND
+                 will play file COKEISIT.SND at 11 KHZ
+
+
+
+                Sample Rate Parameter
+                ---------------------
+                To use the "S" parameter correctly follow it
+                immediately by a number parameter between
+                0 (zero) and 9 (nine).  Zero is the highest
+                playback speed parameter and Nine is the lowest
+                playback speed.  The speeds are listed above.
+
+                Verbose Parameter
+                -----------------
+                SPLAYER usually does it's work quietly, to get
+                more message on your screen use the "V" parameter.
+                This parameter is useful is you are unsure of
+                what SPLAYER is doing at any one time. It is also
+                useful if you want to see our name.
+
+
+******************************************************************************
+*                                                                            *
+*                    More sound files are availible                          *
+*                                                                            *
+*                on Turbo Sys BBS (415)365-7491 2400 N/8/1                   *
+*                                                                            *
+******************************************************************************
+
+
+     For MORE HELP, upgrades, registration, or additional sound files.
+     Contact : Zebra Research
+     modem     (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1
+
+     { NEW, also check out the public domain software that run with }
+     { our sound adapter,  MODPLAY and PLAY (sound editor).         }
+
+
+     US mail:  Zebra Research
+               P.O. BOX 5716
+               Redwood City, Ca.  94063
+

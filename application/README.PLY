@@ -1,0 +1,23 @@
+PLAY v4.20                                                      02-24-92
+----------
+Digital Sound Player and Editor for the Public Domain
+by Zebra Research        Original Code by Mark J. Cox
+
+What you'll NEED
+----------------
+You will need a VGA monitor and a mouse. We recommend at least an AT-PC (286)
+machine with a clock speed of about 10mHz or better. You may also want one
+of our AUDIO BYTES to playback sound thru the printer port(LPT1). We also
+recommend a Hard Disk and an extended keyboard. And, of course, the more
+memory the better.
+
+Starting PLAY.
+--------------
+        C:\SOUND>PLAY /i
+
+     If you have any problems read the PLAY.DOC.
+     For MORE HELP, upgrades, registration, or additional sound files .
+     Contact : Zebra Research
+               P.O. BOX 5716
+               Redwood, City, Ca.  94063
+               (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1

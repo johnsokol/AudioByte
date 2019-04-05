@@ -1,0 +1,538 @@
+
+
+
+Full Source code now available at http://www.dnull.com/zebraresearch
+
+
+----------------------------------------------------------------------------------------------
+SPLAYIT v1.00                                                    02-24-92
+-------------
+
+
+                   S     P     L     A     Y     I     T
+                   -------------------------------------
+                               version 1.00
+
+                    Digital Sound Point and Shoot Player
+                    ------------------------------------
+                           for the Public Domain
+
+
+                                   by
+                             Zebra Research
+
+                                Code  by
+                              John L. Sokol
+
+
+******************************************************************************
+*                                                                            *
+*                    More sound files are availible                          *
+*                                                                            *
+*                on Turbo Sys BBS (415)365-7491 2400 N/8/1                   *
+*                                                                            *
+******************************************************************************
+
+
+A Little History...
+-------------------
+           June 8, 1991 Zebra Research becomes a real company by offering
+        it's first product "Audio Byte", a digital sound playback dongle
+        for the IBM PC Parallel Port.  The release was warmly welcomed
+        by local buyers interested in digital sound on the PC. The package
+        included "SPLAY", playback software and more than 2 megs of sound.
+
+Our Promise to you....
+---------------
+           Zebra Research promises to keep version of "SPLAYIT" in the
+        PUBLIC DOMAIN with every commercial release it produces. The
+        idea is to make available to those that wish to explore digital
+        audio, an interactive tool, which might not normally be available.
+
+Who can use this Software..
+---------------------------
+           This Software is available for use to any person or organization
+        without restrictions, so long as it is not disassembled, reversed
+        engineered or otherwise tampered with.
+
+Restrictions...
+---------------
+           This software may not be sold by any person or organization,
+        except as a copying fee provided to companies whose primary
+        business is copying of PUBLIC DOMAIN SOFWARE or SHAREWARE.
+        You must supply this and any other documents included, to any one
+        requesting a copy. You can not include this software with any
+        computer hardware, except this the prior written permission
+        of ZEBRA RESEARCH.
+
+User Support...
+---------------
+           User Support is limited to questions via electronic mail
+        and direct calls to Zebra Research. Call us to get your digital
+        sound questions answered.
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+SPLAYIT v1.00                                                  02-24-92
+by ZERBRA RESEARCH
+Code by John L. Sokol
+Documentation by Jesse Monroy Jr.
+
+
+        How to it works?
+        ----------------
+            SPLAYIT is is a point and shoot front end for our
+        SPLAY and SPLAYER.  It is a full screen utility with mouse
+        and keyboard support. It is designed so that individual sound
+        clips can be played back with minimal effort. Each sound file's
+        playback (sampled) rate can be determined either by a filename
+        extension convention or by a table of the stored playback (sample)
+        rates ((more below)).
+            This program was written as an example on how to use our
+        product AUDIO BYTE and SPLAY.  Far below I will discuss the
+        procedure on how to program using AUDIO BYTE and SPLAY. This
+        program is written entirely  in Borland's Turbo Pascal and is
+        both powerful and compact.
+
+        The features include:
+
+          .Wide range of playback and sample rates 5-44 kHz.
+          .Supports all IBM PC types (8086,80x86).
+          .Supports all standard IBM PC monitors.
+          .Supports both mouse and keyboard commands.
+          .Accepts most all PCM(1) sound formats
+             (Sound Blaster-VOC,Macintosh,Amiga,SGI,etc.).
+          .Uses the PC's own internal speaker(2).
+
+                (1) PCM (Pulse Code Modulation) is a very common method for
+                    storing analog signals (like sound) to digital format.
+                (2) Some Laptops use Piezo buzzered, they don't work like
+                    a speaker, so they sound scratchy (actually, horibble).
+
+
+        What you'll NEED
+        ----------------
+        You will need an IBM PC computer (or compatible) with an internal
+        speaker.  
+
+        We recommend at least an AT-PC (286) machine with a clock speed
+        of about 10MHz or better. You may also want one of our
+        AUDIO BYTES to playback sound thru the printer port(LPT1).
+        A monitor of some sort, MDA, CGA, EGA, or VGA, would be nice.
+        We also recommend a Hard Disk and, of course, the more memory
+        the better.
+
+        SPLAY does a superior job of playing back sound on the old
+        (4MHz) IBM PCs than SPLAYER can. I strongly recommend an
+        Audio Byte over the internal speaker.
+
+        NOTE: SPLAY and SPLAYER do work on the old (4MHz) IBM PCs, but
+              on the higher sample rates it may not sound correct.
+
+
+        What you should know...
+        -----------------------
+            You should know how to use the arrow keys and a mouse.
+
+            If you are not familar with using the arrow keys or a mouse
+        I can not really help you, that would take much more time
+        and space than is available.
+
+
+
+
+        Doing Something with SPLAYIT
+        ----------------------------
+            Just below is a view of the optimum usage for SPLAYIT.
+        Explaining the usage of it can be more lengthy than would
+        really be helpful, my best suggestion is to play (no pun
+        intended) with SPLAYIT and then you will best be familiar
+        with it.
+            You may use SPLAYIT with or without a mouse. For the
+        purpose of this discussion the screen is broken into left
+        and right half.  I will also summarize the keyboard buttons
+        at the end for clarity.
+
+
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    1st ³                   ZEBRA RESEARCH LOGO                       ³
+    2nd ³ Filename    | speed   | Size                                ³
+    3rd ³ ..                 Directory           Speed database found ³
+    4th ³ COX                Directory                                ³
+    5th ³ JOHN               Directory           Output to use        ³
+    6th ³ SPLAYER            Directory           Autodetect           ³
+    7th ³ DARTH   .M11  11000 Hz  214 K                               ³
+    8th ³ RAIDERS .M11  11000 Hz   61 K                               ³
+    9th ³ -----------------------------          Click here to end    ³
+        ³ -----------------------------                               ³
+        ³ -----------------------------                               ³
+        ³                                                             ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+                The LEFT HALF
+                -------------
+                The second line from the top is just a label.
+
+                The third line with the two dots is an active
+                object, just click on it twice with your mouse pointer
+                and you will change to that directory.
+
+                The fourth through sixth line are directory up in the
+                directory tree and can be accessed also by clicking on
+                them twice also with the mouse pointer.
+
+                The Seventh and Eight line are sound files and are
+                a bit more complex in nature, so I will skip them for
+                just a second.
+
+                The Ninth line is a seires of dashes and is there just
+                to take up space. They do nothing.
+
+
+                        The SEVENTH and EIGHT lines again...
+                        ------------------------------------
+                is what you want to know about, so lets take it slow
+                and use just the seventh line for an example.
+
+                    The first part of the line, the filename, is active
+                and clicking on it twice with the mouse pointer will
+                activate either SPLAY or SPLAYER to play that sound file
+                at the speed indicated to the left of the filename.
+
+                    The second part of the line, the playback speed,  is
+                active also but acts differently depending on which key
+                you press.
+                    Press the left mouse button and the playback speed
+                will increase thru all the possible  combinations
+                available to SPLAY and SPLAYER.
+                    Press the right mouse button and the playback speed
+                decrease.
+
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+   1st  ³                   ZEBRA RESEARCH LOGO                       ³ 1st
+   2nd  ³ Filename    | speed   | Size                                ³ 2nd
+   3rd  ³ ..                 Directory           Speed database found ³ 3rd
+   4th  ³ COX                Directory                                ³ 4th
+   5th  ³ JOHN               Directory           Output to use        ³ 5th
+   6th  ³ SPLAYER            Directory           Autodetect           ³ 6th
+   7th  ³ DARTH   .M11  11000 Hz  214 K                               ³ 7th
+   8th  ³ RAIDERS .M11  11000 Hz   61 K                               ³ 8th
+   9th  ³ -----------------------------          Click here to end    ³ 9th
+        ³ -----------------------------                               ³
+        ³ -----------------------------                               ³
+        ³                                                             ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+
+                The RIGHT HALF
+                --------------
+                The Third line from the top is a message to you
+                from the program saying that it found the Speed
+                datatbase for the sound files in that directory
+                (more about the database later).
+
+                The Fifth line is a label for the sixth line.
+
+                The Sixth line is the type of device specified
+                for playback.  Your choice are limited by the sound
+                playback program you have.  If you only have SPLAYER
+                then only the internal speaker will be used. If you
+                have SPLAY then SPLAYIT will use the printer ports
+                for sound output also.
+
+                The Auto-port-detect is an exclusive feature of
+                AUDIO BYTE and SPLAY.  To use it just plug it in
+                to your printer port and ......SPLAYIT.
+
+                AUTODETECT is the default port when you have SPLAY.
+
+                Line nine is one of the exit button when you have
+                a mouse, if you don't have a mouse use the <ESC> key.
+
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ³                   ZEBRA RESEARCH LOGO                       ³ 1st
+        ³ Filename    | speed   | Size                                ³ 2nd
+        ³ ..                 Directory           Speed database found ³ 3rd
+        ³ COX                Directory                                ³ 4th
+        ³ JOHN               Directory           Output to use        ³ 5th
+        ³ SPLAYER            Directory           Autodetect           ³ 6th
+        ³ DARTH   .M11  11000 Hz  214 K                               ³ 7th
+        ³ RAIDERS .M11  11000 Hz   61 K                               ³ 8th
+        ³ -----------------------------          Click here to end    ³ 9th
+        ³ -----------------------------                               ³
+        ³ -----------------------------                               ³
+        ³                                                             ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+
+        Using the keyboard with SPLAYIT
+        -------------------------------
+        If you have a numeric keypad on your keyboard and SPLAY
+        you should be able to do everthing available to SPLAYIT.
+
+                <up-arrow>              Pressing the UP-ARROW will move the
+                                        selection bar to the next directory.
+
+                <down-arrow>            Pressing the DOWN-ARROW will move the
+                                        selection bar to the selection just
+                                        below the current one.
+
+                <CR> or <ENTER>         Hit the RETURN (or ENTER) key while
+                                        an item is selected will play the
+                                        sound file.
+
+                <left-arrow>            Use the LEFT-ARROW key on the numeric
+                                        keypad to increase the playback
+                                        speed on a selected file.
+
+                <right-arrow>           Use the RIGHT-ARROW key on the numeric
+                                        keypad to decrease the speed.
+
+                <page-up>               PAGE-UP is useful when there is more
+                                        than one page of sound file to play.
+
+                <page-down>             PAGE-DOWN will move the selection
+                                        bar down to the bottom of the page
+                                        or to the last filename on the page
+                                        which ever is closest.
+
+                <END> or <ESC>          END or ESCape will exit the program.
+
+                <P>                     "P" toggle the playback port to use
+                                        (includes the printer port used with
+                                        AUDIO BYTE, not include in PD release)
+
+
+
+        SPLAY vs SPLAYER
+        ----------------
+        The best way to see differences side by side.
+
+                                  SPLAY                   SPLAYER
+                               ------------             ------------
+        user interface              exactly the same for both
+        ease of use                 exactly the same for both
+        program size                 about the same for both
+        sound format can play       exactly the same for both
+        sound resolution(1)       8-bits                   6-bits
+        theoretical Db(2)         48 Db                    36 Db
+        sound quality            SUPERIOR                    OK
+        playback equipment      AUDIO  BYTE           PC internal speaker
+        minimum PC setup(3)     4Mhz IBM PC           6MHz IBM AT (type)
+        equipment OK(4)         ALL IBM PCs              MOST ALL PCs
+        fast machine OK(5)         SURE                   MOST ALL
+        intended use         Commercial Package         Public Domain
+        cost                      $39.95                  FREE-PD
+        junk mail?(6)              NEVER                IMPOSSIBLE
+
+
+                (1) SPLAYER uses 6-bits to determine it's algorigthm, but
+                    the actual number bits use on ANY internal speaker
+                    playback program is TWO. (This is a bit technical.)
+
+                (2) ANY internal speaker program has a theoretical
+                    SIGNAL-to-NOISE ratio of 36DB, at it's very best.
+
+                (3) The comparison was done using an 11Khz sample sound file.
+                    SPLAY will run on an old (4MHz) PC, but we reccommend
+                    a higher perfoming machine.
+
+                (4) SPLAYER does not run well on PC-JRs, 4MHz PCs, and
+                    LAPTOPs with piezo speakers.
+
+                (5) Even Sound Blaster Pro has problems with fast 386's
+                    and 486's, AUDIO BYTE and SPLAY don't have any
+                    problems at all with fast machines.
+
+                (6) Some companyes will sell your name to junk mailers
+                    to make some extra cash, unless you want junk mail
+                    WE PROMISE NEVER TO SELL YOUR NAME.
+
+        PROGRAMING for SPLAY
+        --------------------
+            SPLAY and SPLAYER work exactly the same, so will refer to
+        both by the name of SPLAY in this discussion.
+
+            There are two basic ways to use SPLAY.  One, is to use it
+        in a batch file, this is the easiest.  The second way to program
+        SPLAY is to call as an external program from another program.
+
+                Batch programing
+                ----------------
+                Here is a quick and dirty example:
+
+                @echo off               ; turn off the screen prompt
+                CLS                     ; Clear the screen
+                type welcome.ans        ; display a color screen
+                SPLAY welcome.m22       ; play a cheerful tune
+                echo   hit a key        ; prompt the user for a key stroke
+                pause                   ; wait for the keyboard
+                :END                    ; label to mark the end of the batch
+
+                    This example was a bit short, but I think clear.
+                SPLAY does its work quietly, so it will not mess up
+                any messages that you have displayed previously.
+                IT has auto-port-detect so you won't ever have to guess
+                which port you plugged you AUDIO BYTE into.
+                SPLAY is very small (about 3K) so memory should never be
+                a problem.
+
+                Child process (or EXEC)
+                -----------------------
+                This a short discussion for normal sound program algorithms.
+                For more information see the SPLAYIT source code.
+
+                1)  - check for presences of external retrictors
+                      (DeskView, GeoWorks, or MS-Windows)
+                    These types of applications have a tendency to steal
+                    time from sound program... so they may not even work
+                    with them reliably
+
+                2)  - resize memory
+                    Use DOS call int 21h  function 4ah to reduce you memory
+                    overhead, so you can load a big a sound file as possible.
+
+                3)  - close any unwanted files
+                    Open files rob memory space, close them as soon as
+                    possible.
+
+                4)  - set up pointers to enviroment tables
+                      (call path directly if no table)
+                    Check your Programers' Reference for DOS int 21h
+                    Function 4Bh or for and EXEC process or a Child Proces.
+
+                5)  - set up inheritance flags
+                    Most of upper level languages (like C or PASCAL)
+                    have a limiter flags to setup, so you can limit any
+                    excess information you may not want to pass to an
+                    external program.
+
+                6)  - know the parameters your are using
+                    If you need to change the default parameters to
+                    SPLAY (like the speed) have a table or array
+                    ready so you can insert the parameter in your
+                    calling string.
+
+                7)  - check for network presence when calling
+                      (or use compatiblity mode)
+                    Most people will never have to worry about this
+                    point but, if you plan to use SPLAY at work
+                    (let's say) not check for file lock may bomb your
+                    program.
+
+                8)  - play your sound sample
+                    At this point most anything would need to have done
+                    is done, so, just play the sound sample back.
+
+                9)  - ALL DONE
+                    When SPLAY is done the program should continune
+                    on the following line, just as if you called
+                    a subroutine.
+
+
+        LAST, but not Least...
+        ----------------------
+            SPLAYIT, in order to facilitate it's use may keep a speed
+        database associate with each directoty that it uses files
+        from.  To determine the playback speed for a sound file
+        SPLAYIT will look at the file's extension name.
+        Upon exiting the program (or changing directories) SPLAYIT
+        will update the database from any changes you may have made.
+        The name of the database is SPEEDS.TXT (more about it later).
+        Here is how the database associates:
+
+              M44      will default to a speed of 44,000 Hz
+              M22      .......................... 22,000 Hz
+              M16                                 16,000 Hz
+              M11      -------------------------- 11,000 Hz
+              M8                                   8,000 Hz
+              M7       ..........................  7,000 Hz
+              M55                                  5,500 Hz
+              SND      will default to unknown
+              VOC      will default to unknown
+
+
+            An example would be DARTH.M11 this sound sample would default
+        to a playback speed of 11KHz, unless you change it, in which case
+        it would save your new playback speed when you exited SPLAYIT.
+
+                SPEEDS.TXT
+                ----------
+                    Quickly, here is the database format. It simply a
+                text file with the filename on one line, follow on the
+                next line by the "S" (speed) parameter needed to play it
+                back at the speed requested.
+                    Here is an example.
+
+                DARTH   .M11
+                4
+                MUSHROOM.M11
+                3
+
+
+                The commandline verions for each file would look like this.
+
+                C> SPLAY -s4 DARTH.M11
+
+                SPLAY will playback the sound file DARTH.M11 at 11KHz.
+
+                C> SPLAY -s3 MUSHROOM.M11
+
+                SPLAY will playback the sound file MUSHROOM.M11 at 13.5KHz.
+
+
+
+
+        THAT'S IT
+        ---------
+                Don't be afraid to call or write if I have made any
+        misspellings or errrors while documenting SPLAYIT.
+                ALSO, if anything is unclear, do call, after all this
+        is our business.
+
+
+
+                      A N D
+
+                               T H A N K S
+
+                                                A N D
+
+
+                P L E A S E
+                                  T R Y
+                                                O U R
+
+
+
+                     A       U       D       I       O
+
+                        B       Y       T       E
+
+
+
+******************************************************************************
+*                                                                            *
+*                    More sound files are availible                          *
+*                                                                            *
+*                on Turbo Sys BBS (415)365-7491 2400 N/8/1                   *
+*                                                                            *
+******************************************************************************
+
+     For MORE HELP, upgrades, registration, or additional sound files.
+     Contact : Zebra Research
+     modem     (415)365-7491 --- Turbo Sys BBS  2400bps  8/N/1
+
+     { NEW, also check out the public domain software that run with }
+     { our sound adapter,  MODPLAY and PLAY (sound editor).         }
+
+
+     US mail:  Zebra Research
+               P.O. BOX 5716
+               Redwood City, Ca.  94063
+

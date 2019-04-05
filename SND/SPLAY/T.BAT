@@ -1,0 +1,2 @@
+tasm ab
+tlink ab
